@@ -36,7 +36,10 @@ h1{font-weight:600;font-size:clamp(2.4rem,9vw,4.4rem);line-height:1.05;margin:.2
 .card svg{position:absolute;right:.9rem;bottom:.7rem;width:34px;opacity:.7}
 dialog{border:1px solid var(--line);border-radius:36px 8px 36px 8px;background:var(--bg);color:var(--ink);width:min(560px,92vw);max-height:86vh;padding:0;overflow:hidden}
 dialog::backdrop{background:rgba(5,20,14,.62);backdrop-filter:blur(6px)}
-.sheet{padding:2rem 1.8rem 2.2rem;max-height:86vh;overflow:auto;text-align:center}
+.sheet{padding:2rem 1.8rem 2.2rem;max-height:86vh;overflow:auto;text-align:center;scrollbar-width:none;-ms-overflow-style:none}
+.sheet::-webkit-scrollbar{display:none;width:0;height:0}
+dialog{scrollbar-width:none}
+dialog::-webkit-scrollbar{display:none}
 .sheet h3{font-size:2rem;margin:.3rem 0 .2rem;color:var(--rose);font-weight:600}
 .sheet .orn{width:120px;margin:0 auto .8rem;display:block}
 .sheet pre{font:inherit;font-size:1.3rem;line-height:1.9;white-space:pre-wrap;margin:1rem 0 0}
