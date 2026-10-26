@@ -1,80 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+<html lang="hi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Swaranjali</title>
+<title>कविताएँ &amp; गीत · पोथी</title>
 <link rel="icon" href="Lotus-removebg-preview.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eczar:wght@500;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap">
 <style>
-:root{--bg:#f6f1e4;--bg2:#ece4cf;--ink:#1f3a2c;--soft:#5b6f60;--gold:#b87a00;--rose:#b83a62;--leaf:#3f7d4e;--glass:rgba(255,252,243,.62);--line:rgba(31,58,44,.2);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d241c;--bg2:#143328;--ink:#f3ecd8;--soft:#a9bba9;--gold:#f2b632;--rose:#ee7a9c;--leaf:#6fb583;--glass:rgba(20,51,40,.6);--line:rgba(243,236,216,.2)}}
-:root[data-theme="dark"]{--bg:#0d241c;--bg2:#143328;--ink:#f3ecd8;--soft:#a9bba9;--gold:#f2b632;--rose:#ee7a9c;--leaf:#6fb583;--glass:rgba(20,51,40,.6);--line:rgba(243,236,216,.2)}
+:root{--bg:#ecd9ab;--bg2:#f6e8c4;--ink:#2b1b0e;--soft:#6a5237;--red:#9b2c1a;--gold:#8a6417;--acc:#9b2c1a;--leaf:#4f6b2f;--glass:rgba(250,238,205,.55);--line:rgba(155,44,26,.5);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b140d;--bg2:#2a1f13;--ink:#ecdcb4;--soft:#b9a37a;--red:#e0745a;--gold:#d4a94a;--acc:#e0745a;--leaf:#8fae6a;--glass:rgba(40,30,18,.6);--line:rgba(224,116,90,.5)}}
+:root[data-theme="dark"]{--bg:#1b140d;--bg2:#2a1f13;--ink:#ecdcb4;--soft:#b9a37a;--red:#e0745a;--gold:#d4a94a;--acc:#e0745a;--leaf:#8fae6a;--glass:rgba(40,30,18,.6);--line:rgba(224,116,90,.5)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 700px at 50% -10%,var(--bg2),var(--bg));color:var(--ink);font:400 1.15rem/1.7 "Cormorant Garamond","Tiro Devanagari Hindi",Georgia,serif;min-height:100vh;overflow-x:hidden}
+body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 20% 8%,var(--bg2),transparent 55%),radial-gradient(ellipse at 90% 95%,rgba(120,70,20,.2),transparent 55%),var(--bg);font:400 1.2rem/1.8 "Tiro Devanagari Hindi",Georgia,serif;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:10px;border:2px solid var(--red);box-shadow:inset 0 0 0 5px transparent,inset 0 0 0 6px var(--line);pointer-events:none;z-index:2}
 #petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
-main,header,footer{position:relative;z-index:1}
-.vine{position:absolute;top:0;width:min(34vw,220px);opacity:.9;pointer-events:none}
-.vine.l{left:0}.vine.r{right:0;transform:scaleX(-1)}
-header{text-align:center;padding:4.5rem 1.2rem 1.5rem}
-.bloom{width:min(62vw,230px);height:auto;margin:0 auto .5rem;display:block;overflow:visible}
-.bloom .p{transform-origin:100px 100px;transform:scale(0);animation:open 1.6s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*.09s)}
+header,main,footer,.deco{position:relative;z-index:1}
+.deco.top{height:1.4rem}
+.deco.bot{height:2rem}
+header{text-align:center;padding:2rem 1.6rem 1rem}
+.bloom{width:min(38vw,150px);height:auto;display:block;margin:0 auto;overflow:visible}
+.bloom .p{transform-origin:100px 100px;transform:scale(0);animation:open 1.8s ease-out forwards;animation-delay:calc(var(--i)*.08s)}
 @keyframes open{to{transform:scale(1)}}
-h1{font-weight:600;font-size:clamp(2.4rem,9vw,4.4rem);line-height:1.05;margin:.2rem 0;letter-spacing:.01em}
-.sub{color:var(--soft);font-style:italic;margin:0 auto;max-width:34ch}
-.tabs{display:flex;justify-content:center;gap:.6rem;margin:2rem 0 1.4rem;flex-wrap:wrap}
-.tab{font:inherit;font-size:1.2rem;padding:.55rem 1.6rem;border-radius:999px 999px 999px 4px;border:1px solid var(--line);background:var(--glass);color:var(--ink);cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .25s,color .25s,border-color .25s}
-.tab[aria-selected="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
-.tab:focus-visible,.card:focus-visible,.close:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.grid{max-width:980px;margin:0 auto;padding:0 1.2rem 3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.3rem}
-.card{position:relative;text-align:left;font:inherit;color:inherit;cursor:pointer;padding:1.5rem 1.4rem 1.3rem;background:var(--glass);border:1px solid var(--line);border-radius:28px 6px 28px 6px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .3s,border-color .3s}
-.card:hover{transform:translateY(-4px) rotate(-.4deg);border-color:var(--gold)}
-.card h2{margin:0 0 .5rem;font-size:1.6rem;font-weight:600;color:var(--rose)}
-.card p{margin:0;color:var(--soft);font-style:italic;white-space:pre-line}
-.card svg{position:absolute;right:.9rem;bottom:.7rem;width:34px;opacity:.7}
-dialog{border:1px solid var(--line);border-radius:36px 8px 36px 8px;background:var(--bg);color:var(--ink);width:min(560px,92vw);max-height:86vh;padding:0;overflow:hidden}
-dialog::backdrop{background:rgba(5,20,14,.62);backdrop-filter:blur(6px)}
-.sheet{padding:2rem 1.8rem 2.2rem;max-height:86vh;overflow:auto;text-align:center;scrollbar-width:none;-ms-overflow-style:none}
-.sheet::-webkit-scrollbar{display:none;width:0;height:0}
-dialog{scrollbar-width:none}
-dialog::-webkit-scrollbar{display:none}
-.sheet h3{font-size:2rem;margin:.3rem 0 .2rem;color:var(--rose);font-weight:600}
-.sheet .orn{width:120px;margin:0 auto .8rem;display:block}
-.sheet pre{font:inherit;font-size:1.3rem;line-height:1.9;white-space:pre-wrap;margin:1rem 0 0;text-align:left}
-.close{position:absolute;top:.8rem;right:1rem;border:1px solid var(--line);background:var(--glass);color:var(--ink);font:inherit;border-radius:999px;padding:.2rem .9rem;cursor:pointer}
-footer{text-align:center;color:var(--soft);padding:1rem 1rem 3rem;font-style:italic}
+h1{font:700 clamp(2.4rem,9vw,4rem)/1.3 "Eczar","Tiro Devanagari Hindi",serif;color:var(--red);margin:.4rem 0 0}
+.orn{width:130px;display:block;margin:.2rem auto}
+.sub{color:var(--soft);font-style:italic;margin:0 auto;max-width:36ch}
+.tabs{display:flex;justify-content:center;align-items:center;gap:1.6rem;margin:1.4rem 0 .4rem}
+.tabs::before{content:"❖";order:1;color:var(--gold)}
+#t-k{order:0}#t-g{order:2}
+.tab{font:500 1.3rem "Eczar","Tiro Devanagari Hindi",serif;padding:.2rem .3rem;border:0;border-bottom:2px solid transparent;background:none;color:var(--soft);cursor:pointer}
+.tab[aria-selected="true"]{color:var(--red);border-bottom-color:var(--red)}
+.tab:focus-visible,.card:focus-visible,.close:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.grid{max-width:720px;margin:0 auto;padding:1.4rem 1.6rem 1rem;display:block}
+.card{position:relative;display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;margin:0 0 1.8rem;padding:1.3rem 1.4rem 1.2rem 4.4rem;background:var(--glass);border:1px solid var(--red);box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--line);transition:transform .3s}
+.card:hover{transform:translateX(5px)}
+.card::before{content:"";position:absolute;left:1.1rem;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;border:1px solid var(--red);background:var(--bg);box-shadow:inset 0 0 0 3px var(--bg2)}
+.card .no{position:absolute;left:0;top:.3rem;width:3.4rem;text-align:center;font:700 .95rem "Eczar",serif;color:var(--gold)}
+.card h2{margin:0 0 .3rem;font:700 1.35rem/1.55 "Eczar","Tiro Devanagari Hindi",serif;color:var(--red)}
+.card p{margin:0;color:var(--soft);font-style:italic;white-space:pre-line;font-size:1.05rem}
+.bud{position:absolute;right:.8rem;bottom:.6rem;width:26px;opacity:.55}
+dialog{border:2px solid var(--red);border-radius:2px;background:var(--bg);color:var(--ink);width:min(600px,92vw);max-height:88vh;padding:0;overflow:hidden;box-shadow:0 0 0 5px var(--bg),0 0 0 6px var(--line)}
+dialog::backdrop{background:rgba(25,12,4,.7);backdrop-filter:blur(5px)}
+.sheet{position:relative;padding:2.4rem 2.2rem 2.2rem 3rem;max-height:88vh;overflow:auto;text-align:center;scrollbar-width:none;background:linear-gradient(90deg,transparent 1.6rem,var(--line) 1.6rem 1.65rem,transparent 1.65rem)}
+.sheet::-webkit-scrollbar{display:none}
+.sheet h3{font:700 1.7rem/1.5 "Eczar","Tiro Devanagari Hindi",serif;color:var(--red);margin:.3rem 0 .2rem}
+.sheet pre{font:inherit;font-size:1.25rem;line-height:2;white-space:pre-wrap;margin:1rem 0 0;text-align:left}
+.close{position:absolute;top:.8rem;right:1rem;border:1px solid var(--red);background:var(--glass);color:var(--red);font:inherit;font-size:1rem;padding:.1rem .8rem;cursor:pointer}
+footer{text-align:center;color:var(--soft);padding:1.4rem 1.6rem 0;font-style:italic}
 @media(prefers-reduced-motion:reduce){.bloom .p{animation:none;transform:scale(1)}.card{transition:none}}
-</style>
-</head>
-<body>
+</style></head><body>
 <canvas id="petals" aria-hidden="true"></canvas>
-<svg class="vine l" viewBox="0 0 200 420" fill="none" stroke="var(--leaf)" stroke-width="2" aria-hidden="true"><path d="M10 0C70 80 20 150 90 220S40 340 120 420"/><g fill="var(--leaf)" fill-opacity=".35"><path d="M52 70c30-20 50-6 52 8-24 14-44 10-52-8z"/><path d="M42 150c-28-14-48 2-48 16 24 12 42 6 48-16z"/><path d="M80 230c32-12 50 4 50 18-26 10-44 2-50-18z"/><path d="M62 320c-28-10-46 6-44 20 22 8 40 0 44-20z"/></g><circle cx="104" cy="74" r="9" fill="var(--rose)" stroke="none"/><circle cx="130" cy="246" r="9" fill="var(--gold)" stroke="none"/></svg>
-<svg class="vine r" viewBox="0 0 200 420" fill="none" stroke="var(--leaf)" stroke-width="2" aria-hidden="true"><path d="M10 0C70 80 20 150 90 220S40 340 120 420"/><g fill="var(--leaf)" fill-opacity=".35"><path d="M52 70c30-20 50-6 52 8-24 14-44 10-52-8z"/><path d="M42 150c-28-14-48 2-48 16 24 12 42 6 48-16z"/><path d="M80 230c32-12 50 4 50 18-26 10-44 2-50-18z"/><path d="M62 320c-28-10-46 6-44 20 22 8 40 0 44-20z"/></g><circle cx="104" cy="74" r="9" fill="var(--gold)" stroke="none"/><circle cx="130" cy="246" r="9" fill="var(--rose)" stroke="none"/></svg>
-
+<div class="deco top" aria-hidden="true"></div>
 <header>
-<svg class="bloom" viewBox="0 0 200 200" aria-hidden="true">
-<g id="flower"></g>
-</svg>
+<svg class="bloom" viewBox="0 0 200 200" aria-hidden="true"><g id="flower"></g></svg>
 <h1>कविताएँ &amp; गीत</h1>
+<svg class="orn" viewBox="0 0 120 30" fill="none" stroke="var(--gold)" stroke-width="1.6" aria-hidden="true"><path d="M4 15h42M74 15h42"/><circle cx="60" cy="15" r="5" fill="var(--acc)" stroke="none"/><path d="M60 10c-4-8-12-8-14-4M60 20c-4 8-12 8-14 4M60 10c4-8 12-8 14-4M60 20c4 8 12 8 14 4"/></svg>
 <p class="sub">Kavitaye and Geet: poems and songs, written by hand and kept here.</p>
 <div class="tabs" role="tablist" aria-label="Collections">
 <button class="tab" role="tab" id="t-k" aria-selected="true" aria-controls="grid">Kavitaye</button>
 <button class="tab" role="tab" id="t-g" aria-selected="false" aria-controls="grid">Geet</button>
 </div>
 </header>
-
 <main><div class="grid" id="grid" role="tabpanel" aria-labelledby="t-k"></div></main>
 <footer>Written and Published by Shree Vajendra Singh Rawat</footer>
-
+<div class="deco bot" aria-hidden="true"></div>
 <dialog id="dlg" aria-labelledby="dt"><div class="sheet">
 <button class="close" id="cl" aria-label="Close">Close</button>
-<svg class="orn" viewBox="0 0 120 30" fill="none" stroke="var(--gold)" stroke-width="1.6" aria-hidden="true"><path d="M4 15h42M74 15h42"/><circle cx="60" cy="15" r="5" fill="var(--rose)" stroke="none"/><path d="M60 10c-4-8-12-8-14-4M60 20c-4 8-12 8-14 4M60 10c4-8 12-8 14-4M60 20c4 8 12 8 14 4"/></svg>
+<svg class="orn" viewBox="0 0 120 30" fill="none" stroke="var(--gold)" stroke-width="1.6" aria-hidden="true"><path d="M4 15h42M74 15h42"/><circle cx="60" cy="15" r="5" fill="var(--acc)" stroke="none"/><path d="M60 10c-4-8-12-8-14-4M60 20c-4 8-12 8-14 4M60 10c4-8 12-8 14-4M60 20c4 8 12 8 14 4"/></svg>
 <h3 id="dt"></h3><pre id="db"></pre>
 </div></dialog>
-
 <script>
+const PC=["#9b2c1a","#c9a24a","#d9c08a","#6b8a4a"];const BL=[{n:8,len:90,w:22,c:"var(--red)",o:.55},{n:8,len:64,w:18,c:"var(--gold)",o:.6,off:22.5}];
 const WORKS={
 kavitaye:[
 {t:"वो समाज जो बोल उठा लेकिन नहीं हैं उसपे अभी अकल ।",b:"वह समाज बोल तो उठा, \nपर उसमें अभी विवेक नहीं।, \n\nजब अधर्म का बोलबाला होता है,\nतो दोनों पक्षों का विनाश होता है।, \n\nदोनों सत्ता के भूखे हैं, \nपर किसी में सच्चा उद्देश्य नहीं।, \n\nवे अपनी महानता का बखान करते हैं, \nपर कोई वीरता का कर्म नहीं करते।, \n\nन समझ है, न योग्यता-, \nबस पूछते हैं,\n\n“हमें बदनाम करने वाले तुम कौन हो?”, \nधर्म को मिटाने को,\n\nतुम जैसे गीदड़ आते रहेंगे,\nपर जब तक नारायण का दिव्य अंश है,\nतुम्हारा विनाश निश्चित है।"},
@@ -82,7 +76,8 @@ kavitaye:[
 {t:"युवा और विचारधाराएँ",b:"युवा है देश की नई धड़कन,\nनई सुबह का सबसे पहला गीत,\nउसके हाथों में है इमारतें,\nउसके सपनों में भारत की प्रीत।\n\nकभी उम्मीद थी कि यही युवा,\nसोने की चिड़िया फिर उड़ाएगा,\nज्ञान, आविष्कार और कर्म से,\nनई ऊँचाइयों को छू आएगा।\n\nपर आज सड़कों पर नारे हैं,\nभावनाएँ कहीं तर्क से आगे,\nकिसी के इस्तीफ़े की माँग में,\nसमस्या छूटती है पीछे रह जाए।\n\nसिर्फ़ पद हटाने से अधर्म नहीं,\nजड़ों को समझना भी ज़रूरी,\nप्रदर्शन अधिकार है, पर यही भी,\nजिम्मेदारी और विवेक से हो ज़रूरी।\n\nमैं भी युवा हूँ, पढ़ने चला हूँ,\nप्रजा के हित का रास्ता चुनने,\nन केवल चीखना, बल्कि सीखना,\nअपने कंधों पर देश को चुनना।\n\nमहिलाओं की आवाज़ भी है आज,\nन्याय की प्यास, सम्मान की डोर,\nअधर्म किसी लिंग का नहीं होता,\nकर्तव्य है सबका, यही है शुरूआत।\n\nचाहिए ऐसा नेतृत्व हमें,\nजो ज्ञान से जुड़े, संयम से बँधे,\nन लोभ में, न मोह में डूबे,\nजनता के सुख के लिए जो बँधे।\n\nभारत एक गहरी राह पर है,\nपर रास्ते अभी पूरे बंद नहीं,\nअगर युवा सोचे, सीखे और बने,\nतो रात के बाद फिर सवेरा है।"},
 {t:"गरीबी एक समस्या जो ना कर सके किसी का भला ।",b:"नेताओ ने लूट दी हैं इज्जत बचा है सिर्फ तेरा पैसा । \nलूट - लूट के कंगाल कर दिया हैं तुझे बाकियों जैसा । \n\nछोड़ दे यह नौकरी वरना कंगाल करके छोड़ेगी तुझे ही । \nभारत को वापस बनाओ गरीबी को जड़ से हटाओ । \n\nकब तक तानाशाही चलेगी गरीबों की आवाज दबी रहेगी । \nलाचार लालच मैं फसे नेता उससी का फायदा उठाती । \n\nगरीबी की सोच को बदलना है,\nतभी तो आत्मनिर्भर बनना है। \n\nगरीबी की मार सहे हर ओर, नेताओं का है खेल और खुशियों का डगर।\nभरोसा न कर किसी पर इस भीड़ में, ठग लेंगे तुझे रात-दिन की जीद में। \n\nगरीबी की सोच बदल कुछ विशेषता कमल ।\n\nगरीबी की दीवार गिरेगी एक दिन, जब जागेगा हर हाथ, जागेगा हर दिल।\nसोच बदलेगी, राह बदलेगी, तभी बनेगा भारत फिर से महान।"},
 {t:"हिंदू कलंकित हो चुका हैं पता नहीं कहा खो चुका है। ",b:"हिंदू कलंकित हो चुका हैं ।\nकहा खो चुका हैं ।\n\nपरंपरा बचाने की उम्र मैं पार्टियों के चापलूसी कर रहा हैं ।\nदेवताओं को जहां पूजना था आज उन्हीं को छोड़ रहा हैं । \n\nतीर्थों को पिकनिक बना कर रहा मजा । \nलेकिन जब मृत्यु होगी तो भाई होगी तेरी सजा ।\n\nमजाक बना दिया हैं शास्त्रों को तुमने । \nकभी ना कभी इसकी महत्व भी चुभेगी तुम्हे । \n\nहर परंपरा को आज बन करना चाहता हो । \nवही परंपरा की जरूरत पड़ेगी तुम्हे । \n\nजिन म्लेच्छो के पीछे भागते हो तुम । \nवही लोग नकारते हैं तुमको ।\n\nउनके परंपरा मैं घुसने की ज्यादा चूल हैं ।\nतो धर्म बदल कर क्यों नहीं जाते हो ? \n\nपाखण्ड को धर्म बनाते हो । \nजहर को अमृत समझकर पी जाते हो । \n\nगौ हत्या और गंगा पे तो सवाल उठाना नहीं । \nतो फिर किस बात के हिंदू रहे हो तुम ।"},
-{t:"घृणा से न्याय नहीं, बांटने से उद्धार नहीं ।",b:"आज की युवा कौन जो बोलती कौन सही कौन गलत \nसोचना उसको चाहिए था जिसके हाथ पे गद्दी हैं ।\n\nन्याय को हाथ में लेकर नहीं होगा यह इंसाफ़ \n\nहद से ज्यादा क्या ही होगा इस बड़ी जंग से ।\n\nदेश को बांटकर क्या मिलेगा तुमको \nसोच के गौर करना इस छोटी बात पे ।\n\nदेश को रसातल मैं ले जा रहे हो तुम ।\nपता नहीं चलेगा कहा डूब के गए इस देश को ।\nदुनिया से प्यार चाहिए तो करो विदेश गमन । \nभारत को गुलाम बनके क्या मिलेगा तुम्हे ? \n\nपैसों के लिए भागते हो यही हैं नपुंसकता ।\nआज कमाने लायक होते तो ना करते चापलूसी । \n\nन्याय को हाथ मैं लेकर ना बन जाओगे शहंशा। \nछोड़ दो उसी के हाल ना सुधरेगा कभी । \n\nनेता मजे करते हैं तुम्हारे इस नाटक से फरक पड़ता तो वो आज सड़क पे रोते फिरते । \nराजनीति को मजाक बना दिये हैं तुम लोग न्याय का भी ऐसा हाल कर दोगे ।"}
+{t:"घृणा से न्याय नहीं, बांटने से उद्धार नहीं ।",b:"आज की युवा कौन जो बोलती कौन सही कौन गलत \nसोचना उसको चाहिए था जिसके हाथ पे गद्दी हैं ।\n\nन्याय को हाथ में लेकर नहीं होगा यह इंसाफ़ \n\nहद से ज्यादा क्या ही होगा इस बड़ी जंग से ।\n\nदेश को बांटकर क्या मिलेगा तुमको \nसोच के गौर करना इस छोटी बात पे ।\n\nदेश को रसातल मैं ले जा रहे हो तुम ।\nपता नहीं चलेगा कहा डूब के गए इस देश को ।\nदुनिया से प्यार चाहिए तो करो विदेश गमन । \nभारत को गुलाम बनके क्या मिलेगा तुम्हे ? \n\nपैसों के लिए भागते हो यही हैं नपुंसकता ।\nआज कमाने लायक होते तो ना करते चापलूसी । \n\nन्याय को हाथ मैं लेकर ना बन जाओगे शहंशा। \nछोड़ दो उसी के हाल ना सुधरेगा कभी । \n\nनेता मजे करते हैं तुम्हारे इस नाटक से फरक पड़ता तो वो आज सड़क पे रोते फिरते । \nराजनीति को मजाक बना दिये हैं तुम लोग न्याय का भी ऐसा हाल कर दोगे ।"},
+{t:"ज्ञान एक कलियुगी श्राप ।",b:"ज्ञान का एक तिनका जिंदगी बदल देती हैं ।\nएक सच को बताकर हजारों लूट लेती हैं ।\n\nज्ञान से ही चित परिवर्तित होता हैं । \nउनसे दूर करवाता हैं जो तुम्हारा नाश चाहते हैं ।\n\nकलियुग हैं वो युग जिसमे ज्ञान का कोई मूल नहीं । \nज्ञानी हैं जो उसकी कोई उससे ना अज्ञानी कर सके कोई ।\n\nज्ञानियों पे होता अत्याचार कोई देखता नहीं । \nउस अज्ञानी को लगता वो झूठ फैलाकर विकृति कर रही ।\n\nसच मैं ही धर्म हैं झूठ मैं ही अधर्म । \nप्रधान बन चुका तो बढ़ जाता हैं अधम ।\n\nरास ना आती अत्याचारी को ज्ञान देकर क्युकी अपने प्रवृति मैं फस हुआ । \nउद्धार उन्ही का होता हैं जो बदलना चाहते हैं इस जीवन का निराकार ।\n\nयह क्रूर दुनिया से ही चलता हैं झूठ का प्रचार सच कहकर मच जाता हैं तांडव ।\nनेता, कर्मचारी लेते हैं झूठ का सहारा अब पता नहीं को सुधारे इस सब का पाप का घड़ा ।\n\nज्ञानी हैं वो हैं जो सिद्ध करेगा अपना जीवनी महान ।\nझूठ का क्या वो तो हजारों बोलने पे गुजर जाता ।"}
 ],
 geet:[
 {t:"हे समाज क्या चाहता हैं तू ?",b:"हे समाज क्या चाहता हैं तू ? \nकब तक इस अन्याय को सहना चाहता हैं तू ? \nदुनिया लड़ रही अपने अधिकारों के लिए क्यू सोया हैं अभी तक तू ? \n\nसरकारे लूट रही जनता को लेकिन चुप रहना चाहती हैं तू । \nभ्रष्टाचार बढ़ते जा रही फिर भी बिक जाना चाहता हैं तू । \nकाम निकलवाना तेरी खून मैं उससे कब तक चलायेगा तू ? \n\nहे समाज क्या चाहता हैं तू । \nकब तक इस अन्याय को सहन चाहता हैं तू । \n\nधर्म निष्ट ना रही समाज मैं फिर भी हिन्दू कहता हैं तू । \nधर्म को पैसा खिला कर अपना ही परलोक खराब कर रहा हैं तू । \nलालच लोभ से कब तक जूझेगा अब तो बाहर निकाल वरना कली अंत मैं मृत्यु पा जाएगा तू । \nसमय हैं आज भी पर लगाना नहीं चाहता दिमाग तू । \nजिनकी सुनना चाहिए था उनको गली देता रहा तू । \n\nकब तक करेगा चापलूसी जब मरके ही अकेला जाएगा । \nअब तो रुकजा अधर्मी कब तक पाप कर पाएगा ।"},
@@ -93,15 +88,17 @@ geet:[
 {t:"सृष्टि का निर्माता ।",b:"पूछते हो वो कहा हैं ? \nपूछते हो हैं कहा ? \n\nहृदय मैं बसने वाले हैं वो जगत्कर्ता । \nनहीं मानना तो मुंह मोड़ लो क्यों करते यह हल्ला । \n\nजिसकी शुरुआत पाखण्ड दिखाने से हुआ । \nआज वही धर्म को पाखंड दिखाता हैं । \n\nअच्छा शिक्षक मिलता नहीं तो दोष क्यों धर्म को ? \nआचार्य तो खुद परेशान अपने लोगों से । \nप्रचलित नहीं होना चाहते तभी ऐसे पाखण्डी हैं । \n\nलूटने वाले हर जगह बताना हैं तुम्हारा काम । \nप्रमाण देकर खंडित कर दो क्यों डरते हो इतना ? \n\nपूछते हो वो कहा हैं ? \nपूछते हो हैं कहा ? \n\nहृदय मैं बसने वाले हैं वो जगत्कर्ता । \nनहीं मानना तो मुंह मोड़ लो क्यों करते यह हल्ला । \n\nतुमने नकारा हैं वो जिसमें था धर्म प्रकाश \nकिताबों को नहीं मानते तो प्रमाण कहा दे तुम्हे ? \n\nप्रलाप को धर्म कह कर करते हो विनाश । \nधर्म मैं होता तो आज करते हर जगह । \n\nप्रथाओं को बदनाम कर उठा दिया हैं धर्म को सर पर । \nखुद को ज्ञानी कहते हो तो क्यों हार गए वो ? \n\nपूछते हो वो कहा हैं ? \nपूछते हो हैं कहा ? \n\nहृदय मैं बसने वाले हैं वो जगत्कर्ता । \nनहीं मानना तो मुंह मोड़ लो क्यों करते यह हल्ला ।"}
 ]};
 const $=s=>document.querySelector(s),grid=$("#grid"),dlg=$("#dlg");
-const bud='<svg viewBox="0 0 40 40" aria-hidden="true"><g fill="var(--gold)"><ellipse cx="20" cy="10" rx="5" ry="9"/><ellipse cx="20" cy="30" rx="5" ry="9"/><ellipse cx="10" cy="20" rx="9" ry="5"/><ellipse cx="30" cy="20" rx="9" ry="5"/></g><circle cx="20" cy="20" r="4" fill="var(--rose)"/></svg>';
+const dn=n=>[...String(n)].map(d=>"०१२३४५६७८९"[d]).join("");
+const bud='<svg class="bud" viewBox="0 0 40 40" aria-hidden="true"><g fill="var(--gold)"><ellipse cx="20" cy="10" rx="5" ry="9"/><ellipse cx="20" cy="30" rx="5" ry="9"/><ellipse cx="10" cy="20" rx="9" ry="5"/><ellipse cx="30" cy="20" rx="9" ry="5"/></g><circle cx="20" cy="20" r="4" fill="var(--acc)"/></svg>';
 function show(k){
  grid.innerHTML="";
- WORKS[k].forEach(w=>{
+ WORKS[k].forEach((w,i)=>{
   const c=document.createElement("button");c.className="card";
-  c.innerHTML="<h2></h2><p></p>"+bud;
+  c.innerHTML='<span class="no"></span><h2></h2><p></p>'+bud;
+  c.querySelector(".no").textContent=dn(i+1);
   c.querySelector("h2").textContent=w.t;
   c.querySelector("p").textContent=w.b.split("\n").slice(0,2).join("\n")+" …";
-  c.onclick=()=>{$("#dt").textContent=w.t;$("#db").textContent=w.b;dlg.showModal()};
+  c.onclick=()=>{$("#dt").textContent=w.t;$("#db").textContent=w.b;dlg.showModal();dlg.querySelector(".sheet").scrollTop=0};
   grid.appendChild(c);
  });
  [["k","kavitaye"],["g","geet"]].forEach(([i,n])=>$("#t-"+i).setAttribute("aria-selected",n===k));
@@ -112,20 +109,16 @@ $("#cl").onclick=()=>dlg.close();
 dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
 show("kavitaye");
 
-/* blooming flower */
-(()=>{const g=$("#flower");let h="";
- const cols=["var(--rose)","var(--gold)"];
- for(let i=0;i<12;i++){const r=i*30,o=i%2;
-  h+=`<g transform="rotate(${r} 100 100)"><g class="p" style="--i:${i}"><path d="M100 100C84 70 88 28 100 8C112 28 116 70 100 100Z" fill="${cols[o]}" fill-opacity="${o?0.55:0.8}" stroke="var(--ink)" stroke-opacity=".25"/></g></g>`;}
+(()=>{let h="",j=0;
+ BL.forEach(L=>{for(let i=0;i<L.n;i++){const r=i*360/L.n+(L.off||0),l=L.len,w=L.w;
+  h+=`<g transform="rotate(${r} 100 100)"><g class="p" style="--i:${j++}"><path d="M100 100C${100-w} ${100-l*.4} ${100-w*.6} ${100-l*.85} 100 ${100-l}C${100+w*.6} ${100-l*.85} ${100+w} ${100-l*.4} 100 100Z" fill="${L.c}" fill-opacity="${L.o}" stroke="var(--ink)" stroke-opacity=".3"/></g></g>`}});
  h+='<circle cx="100" cy="100" r="11" fill="var(--leaf)"/><circle cx="100" cy="100" r="5" fill="var(--gold)"/>';
- g.innerHTML=h;})();
+ $("#flower").innerHTML=h})();
 
-/* drifting petals */
 (()=>{if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
  const cv=$("#petals"),x=cv.getContext("2d");let W,H,P=[];
  const rs=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};rs();addEventListener("resize",rs);
- const cl=["#e06b8e","#f2b632","#f6e9c8","#7fbf8e"];
- const mk=()=>({x:Math.random()*W,y:-20-Math.random()*H,s:6+Math.random()*9,v:.4+Math.random()*.8,w:Math.random()*6,a:Math.random()*6,c:cl[Math.random()*4|0]});
+ const mk=()=>({x:Math.random()*W,y:-20-Math.random()*H,s:6+Math.random()*9,v:.4+Math.random()*.8,w:Math.random()*6,a:Math.random()*6,c:PC[Math.random()*PC.length|0]});
  for(let i=0;i<26;i++){P.push(mk());P[i].y=Math.random()*H}
  (function f(){x.clearRect(0,0,W,H);
   P.forEach(p=>{p.y+=p.v;p.w+=.015;p.a+=.02;p.x+=Math.sin(p.w)*.6;
@@ -133,6 +126,4 @@ show("kavitaye");
    x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=.55;x.fillStyle=p.c;
    x.beginPath();x.ellipse(0,0,p.s*.45,p.s,0,0,7);x.fill();x.restore()});
   requestAnimationFrame(f)})();})();
-</script>
-</body>
-</html>
+</script></body></html>
